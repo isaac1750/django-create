@@ -1,0 +1,12 @@
+<form action= "{% url 'crud1:detail' %}" method="post">
+	{% csrf_token %}
+    {{ form.as_p }}
+    {% for author in authors %}
+
+	<p>{{author.name}}</p>
+    <input type="submit" value="Save">
+    
+	
+{% endfor %}
+</form>
+
